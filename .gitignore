@@ -12,15 +12,11 @@ build/
 develop-eggs/
 dist/
 downloads/
-data/
 eggs/
 .eggs/
-figures/
 lib/
 lib64/
-movies/
 parts/
-references/
 sdist/
 var/
 *.egg-info/
@@ -82,6 +78,7 @@ target/
 # exclude data from source control by default
 data/
 figures/
+movies/
 # I want to be able to handle links in here...need to exclude certain file types
 # instead
 
