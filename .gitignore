@@ -12,11 +12,15 @@ build/
 develop-eggs/
 dist/
 downloads/
+data/
 eggs/
 .eggs/
+figures/
 lib/
 lib64/
+movies/
 parts/
+references/
 sdist/
 var/
 *.egg-info/
