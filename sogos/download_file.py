@@ -179,8 +179,8 @@ def how_far(index, all_vals, interval):
         all_vals: a list
         interval: e.g. 0.1 = print notices at 10%-completion intervals
     """
-    percents_comp = floor(linspace(0, 100, 1 / interval + 1))
-    percents_comp_indices = floor(linspace(0, len(all_vals), 1 / interval + 1))
+    percents_comp = floor(linspace(0, 100, int(1 / interval + 1)))
+    percents_comp_indices = floor(linspace(0, len(all_vals), int( 1 / interval + 1)))
     if index in percents_comp_indices:
         percent_comp = percents_comp[int(where(percents_comp_indices == index)[0][0])]
         print('>>> ' + str(datetime.now()) + ' - action is ' + str(percent_comp) + '% complete')

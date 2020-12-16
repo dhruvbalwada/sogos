@@ -16,8 +16,9 @@ import sogos.download_file as df
 
 
 def argo_gdac(start_date,end_date,lat_range,lon_range,save_to_root,
-              overwrite_global_index=True,overwrite_profs=False,bypass_download=False,
-              only_download_wmoids=[]):
+             overwrite_global_index=True,overwrite_profs=False,
+              bypass_download=False,
+              only_download_wmoids=[], argo_data_type='C'):
     """ Downloads Argo float profiles from US-GODAE GDAC.
 
     Args:
@@ -39,8 +40,12 @@ def argo_gdac(start_date,end_date,lat_range,lon_range,save_to_root,
     url_root = '/ifremer/argo/' 
     ftp_root = 'ftp.ifremer.fr'
     
-    global_index_filename = 'ar_index_global_prof.txt'
-    local_index_filename = 'ar_index_local_prof.txt'  # index of locally downloaded profiles
+    if argo_data_type =='C':
+        global_index_filename = 'ar_index_global_prof.txt'
+        local_index_filename = 'ar_index_local_prof.txt'  # index of locally downloaded profiles
+    elif argo_data_type=='S': 
+        global_index_filename = 'argo_synthetic-profile_index.txt'
+        local_index_filename = 'argo_synthetic-profile_index_local.txt'
     url_profiles_root = url_root + 'dac/'
 
     # download most recent global profile list and parse columns
@@ -128,7 +133,7 @@ def argo_gdac(start_date,end_date,lat_range,lon_range,save_to_root,
                 trim_local_profile_list_indices.append(i)
             df.single_file(url_profiles_root + prof_path,prof_file,save_to_profiles,
                            ftp_root=ftp_root,overwrite=overwrite_profs,verbose=False)
-            df.how_far(i,matching_profs,0.01)
+            df.how_far(i,matching_profs,0.1)
         if len(only_download_wmoids) is not 0:
             matching_profs = matching_profs[trim_local_profile_list_indices]
             local_profile_list = local_profile_list[trim_local_profile_list_indices,:]
