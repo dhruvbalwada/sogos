@@ -39,3 +39,5 @@ dependencies:
     - wget
     - nc-time-axis
     - jedi==0.17.2
+    - gpy
+    - jax
