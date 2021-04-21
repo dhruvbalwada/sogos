@@ -82,6 +82,8 @@ movies/
 # I want to be able to handle links in here...need to exclude certain file types
 # instead
 
+*.key
+
 # Mac OS-specific storage files
 .DS_Store
 
