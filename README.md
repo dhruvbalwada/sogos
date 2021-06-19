@@ -1,10 +1,7 @@
-sogos
+SOGOS: Southern Ocean Glider Observations of the Submesoscales
 ==============================
-[![Build Status](https://travis-ci.com/dhruvbalwada/sogos.svg?branch=master)](https://travis-ci.com/dhruvbalwada/sogos)
-[![codecov](https://codecov.io/gh/dhruvbalwada/sogos/branch/master/graph/badge.svg)](https://codecov.io/gh/dhruvbalwada/sogos)
-[![License:MIT](https://img.shields.io/badge/License-MIT-lightgray.svg?style=flt-square)](https://opensource.org/licenses/MIT)
 
-Analysis of the Southern Ocean Glider+Argo Float project.[D
+Analysis of the Southern Ocean Glider+Argo Float project. 
 
 --------
 
