@@ -129,7 +129,7 @@ def argo_gdac(start_date,end_date,lat_range,lon_range,save_to_root,
                 if all([selected_wmoid not in prof_file for selected_wmoid in only_download_wmoids]):
                     if prof_file in existing_prof_files: trim_local_profile_list_indices.append(i)
                     continue
-                print('dlp.argo_gdac() is downloading ' + prof_file)
+                print('dlp.argo_gdac() is now downloading ' + prof_file)
                 trim_local_profile_list_indices.append(i)
             df.single_file(url_profiles_root + prof_path,prof_file,save_to_profiles,
                            ftp_root=ftp_root,overwrite=overwrite_profs,verbose=False)
@@ -172,10 +172,12 @@ def argo_gdac(start_date,end_date,lat_range,lon_range,save_to_root,
     ending_position = [0, 0]
     interp_profile_indices = []
     datetime_stamps = []
+    
     for p in range(num_profs):
         if p > 1: previous_prof_wmoid = local_profile_list[p-1, 0]
         current_prof_wmoid = local_profile_list[p,0]
         profile_file = spnc.netcdf_file(save_to_profiles + local_profile_list[p,1], 'r', mmap=False)
+        print(profile_file)
         profile_mode = str(profile_file.variables['DATA_MODE'][0])[2]
         local_profile_list[p,2] = profile_mode  # R, D, or A (adjusted real-time)
         profile_lat_given = profile_file.variables['LATITUDE'][0]

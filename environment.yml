@@ -21,7 +21,7 @@ dependencies:
   - matplotlib
   - pykrige
   - pip=20
-  - h5py
+  - h5py=2.10.0
   - cartopy==0.18
   - cmocean
   - xrft
@@ -30,7 +30,7 @@ dependencies:
     - requests
     - ecmwf-api-client
     - geo_tools
-    - progressbar
+    - progressbar2
     - geographiclib
     - pyshp
     - wget

@@ -23,18 +23,19 @@
 clear all
 close all
 
-glidnum = 660;
+glidnum = 659;
 
 if glidnum == 659
-    data_659 = '/Users/dhruvbalwada/OneDrive/sogos_data/data/interim/gliders/sg659/sg659_dives_20200413.mat';
+    data_659 = '/Users/dhruvbalwada/OneDrive/sogos_data/data/interim/gliders/sg659_20201010/sg659_dives_20201010.mat';
     load(data_659);
-    glid_data = data659_20200413;
+    glid_data = data659_20201010;
 
 else
-    data_660 = '/Users/dhruvbalwada/OneDrive/sogos_data/data/interim/gliders/sg660/sg660_dives_20200413.mat';
+    data_660 = '/Users/dhruvbalwada/OneDrive/sogos_data/data/interim/gliders/sg660_20201010/sg660_dives_20201010.mat';
     load(data_660);
-    glid_data = data660_20200413;
+    glid_data = data660_20201010;
 end
+
 
 %% a trial plot
 %n=10;
