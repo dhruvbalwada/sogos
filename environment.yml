@@ -25,6 +25,7 @@ dependencies:
   - cartopy==0.18
   - cmocean
   - xrft
+  - spectrum
   - glidertools
   - pip:
     - requests
