@@ -28,6 +28,7 @@ dependencies:
   - spectrum
   - glidertools
   - pip:
+    - git+https://github.com/xgcm/xgcm.git
     - requests
     - ecmwf-api-client
     - geo_tools
